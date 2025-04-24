@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, Button } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -67,9 +67,15 @@ export default function TabTwoScreen() {
       <Collapsible title="assistente IA">
         <ThemedText>
           para falar com a nossa assistente IA acesse o site " assistente.domaykopix.com.br" e tire suas duvidas{' '}
+
           <ThemedText type="defaultSemiBold"><col /></ThemedText> 
           <ThemedText type="defaultSemiBold"></ThemedText>{' '}
-          
+          <Button
+  onPress={() => {
+    console.log('You tapped the button!');
+  }}
+  title="chat de IA maykopix"
+/>
         </ThemedText>
         {Platform.select({
           ios: (

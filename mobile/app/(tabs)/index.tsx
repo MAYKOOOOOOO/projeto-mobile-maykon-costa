@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Button } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -11,7 +11,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#afffff', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/image.png')}
           style={styles.reactLogo}
         />
       }>
@@ -19,19 +19,39 @@ export default function HomeScreen() {
         <ThemedText type="title">maykinhopix</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">area de transaçao de pix</ThemedText>
+        <ThemedText type="subtitle">area de transaçao de pix <br></br>
+        <Button
+  onPress={() => {
+    console.log('You tapped the button!');
+  }}
+  title="transferencia via pix"
+/>
+        </ThemedText>
+       
         <ThemedText>
           seu saldo: r$500.00
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">PAGAR BOLETO/CONTAS</ThemedText>
+      <ThemedText type="subtitle">Empréstimos <br></br>
+        <Button
+  onPress={() => {
+    console.log('You tapped the button!');
+  }}
+  title="fazer um emprestimo"
+/></ThemedText>
         <ThemedText>
-          CAIXINHA:faça seu dinheiro render 😊👌
+        faça seu dinheiro render 😊👌
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">FAZER IMPRÉSTIMO AQUI!</ThemedText>
+        <ThemedText type="subtitle">PAGUE SUAS CONTAS AQUI! <br></br> <Button
+  onPress={() => {
+    console.log('You tapped the button!');
+  }}
+  title="PAGAR BOLETOS/CONTAS"
+/></ThemedText>
+        
         <ThemedText>
         muito obrigado por usar nossos serviços, qualquer duvida acesso o suporte😁
         </ThemedText>
@@ -51,8 +71,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: 250,
+    width: 350,
     bottom: 0,
     left: 0,
     position: 'absolute',
