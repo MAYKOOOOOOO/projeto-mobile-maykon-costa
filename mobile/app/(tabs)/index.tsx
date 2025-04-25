@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 250,
-    width: 350,
+    width: 600,
     bottom: 0,
     left: 0,
     position: 'absolute',
